@@ -50,8 +50,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
-    
+    background-color: var(--primary-color); 
 }
 .nav__logo a{
     display: flex;
@@ -123,10 +122,13 @@ nav{
         background-color: transparent;
         transform: none;
     }
+    .nav__links a {
+        color: var(--text-dark);
+    }/*nao esta funcionado a troca de cor*/
     .nav__links a:hover{
         color: var(--primary-color);
     }
-    .nav__btn {
+    .nav__btn {/*botao nao fica no canto direito*/
         display: flex;
         flex: 1;
         justify-content: flex-end;
@@ -167,11 +169,11 @@ nav{
 
 .header__container{
     display: grid;
-    gap: 2;
+    gap: 2rem;
     overflow: hidden;
 }
 .header__image img {
-    max-width: 600;
+    max-width: 600px;
     margin-inline: auto;
 }
 .header__content h1{
