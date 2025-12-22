@@ -13,7 +13,7 @@
                 <a href="#">Food <span>man</span></a>
             </div>
             <div class="nav__menu__btn" id="menu-btn">
-                <span><i class="ri-menu-line"></i></span>
+                <span><i class="ri-menu-line">b</i></span>
             </div>
         </div>
         <ul class="nav__links" id="nav-links">
@@ -42,9 +42,8 @@
         </div>
     </section>
     <script>
-        const menuBtn = document.getElementById('menu-btn');
+        const menuBtn = document.getElementById('menu-btn');//funcionado
         const navLinks = document.getElementById('nav-links');
-        /*botao nao esta funciondo*/
         menuBtn.addEventListener('click', ()=>{
             navLinks.classList.toggle('open');
         });
