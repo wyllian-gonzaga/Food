@@ -81,14 +81,14 @@ nav{
 .nav__links.open{
     transform: translateY(0);
 }
-.nav__links a {
+.nav__links a  {
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--primary-color);/* troca de foco nao funcionando a no links */
 }
-.nav__links a:hover{
+.nav__links a:hover {
     color: var(--text-dark);
 }
-.nav__button {
+.nav__btn { 
     display: none;
 }
 /*navegação responsiva*/
@@ -124,11 +124,11 @@ nav{
     }
     .nav__links a {
         color: var(--text-dark);
-    }/*nao esta funcionado a troca de cor*/
+    }
     .nav__links a:hover{
         color: var(--primary-color);
     }
-    .nav__btn {/*botao nao fica no canto direito*/
+    .nav__btn {
         display: flex;
         flex: 1;
         justify-content: flex-end;
