@@ -230,7 +230,7 @@ nav{
     padding: 1rem;
     text-align: center;
     border-radius: 2rem;
-    transition: 0.3s;
+    transition: 0.3s linear;
 }
 .special__card:hover{
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
@@ -240,7 +240,7 @@ nav{
     width: 100%;
     margin-inline:auto;
     margin-bottom: 1rem;
-    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3) );    
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));    
 }
 .special__card h4{
     margin-bottom: 0.5rem;
@@ -248,4 +248,13 @@ nav{
     font-weight: 700;
     color: var(--text-dark);
 }
- 
+.special__card p {
+    margin-bottom: 1.5rem;
+    color: var(--text-ligth);
+    line-height: 1.75rem;
+}
+.special__ratings{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: goldenrod;
+}
