@@ -195,7 +195,79 @@
             </div>
         </div>
     </section>
-
+    <section class="testimonial-section">
+        <h2 class="section__header">What Our Costumers are Saying</h2> 
+        <p class="section__descripiton">
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis atque qui distinctio hic eius non alias, vitae fuga corrupti, consequatur doloribus magnam id beatae harum consectetur dignissimos aliquam fugit nam.
+        </p>
+        <div class="testimonial__container" id="testimunial-container">
+            <div class="testimonial-card active">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi quia numquam exercitationem? Qui non reprehenderit magni illum alias veniam saepe eos, vel quia doloribus similique, culpa perspiciatis, error fugit odio.
+                </p>
+                <img src="assents/client1.jpg" alt="">
+                <h4>Amelia Lee</h4>
+                <h5>Business Executive</h5>
+            </div>
+            <div class="testimonial-card" >
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi quia numquam exercitationem? Qui non reprehenderit magni illum alias veniam saepe eos, vel quia doloribus similique, culpa perspiciatis, error fugit odio.
+                </p>
+                <img src="assents/client2.jpg" alt="">
+                <h4>Anna Lee</h4>
+                <h5>Food Blogger</h5>
+            </div>
+            <div class="testimonial-card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi quia numquam exercitationem? Qui non reprehenderit magni illum alias veniam saepe eos, vel quia doloribus similique, culpa perspiciatis, error fugit odio.
+                </p>
+                <img src="assents/client3.jpg" alt="">
+                <h4>Antonny Anns</h4>
+                <h5>Event Planner</h5>
+            </div>
+        </div>
+        <div class="dots" id="dots">@</div>
+    </section>
+    <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="logo footer__logo">
+                    <a href="#">Food<span>man</span></a>
+                </div>
+                <p class="section__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis soluta illum ad repellendus. In optio commodi delectus dolorem ex. Nulla repudiandae, iusto distinctio eaque dolores molestiae deserunt reprehenderit nisi!
+                </p>
+            </div>
+            <div class="footer__col">
+                <h4>Product</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Meal Deals</a></li>
+                    <li><a href="#">Catering Options</a></li>
+                    <li><a href="#">Seasonal Offerings</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Information</h4>
+                <ul class="footer__links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Nutrition Information</a></li>
+                    <li><a href="#">Allergen Information</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careeers</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2026.
+        </div>
+    </footer>
 
 
     <script>
@@ -204,6 +276,32 @@
         menuBtn.addEventListener('click', ()=>{
             navLinks.classList.toggle('open');
         });
+    </script>
+    <script>
+        const cards = document.querySelectorAll("testiminial-card") ;
+        const dotsContainer = document.getElementById("dots");
+        let currentIndex = 0;
+        cards.forEach((_, idx) =>{
+            const dot = document.createElement(span);
+            dot.addEventListener('click',()=> showSlide(idx));
+            dotsContainer.appendChild(dot)
+        })
+
+        const dots = document.querySelectorAll(".dots span");
+        function showSlide(index){
+            cards.forEach(card => cards.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            cards[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        function auroSlide(){
+            currentIndex = (currentIndex+1)% cards.length;
+            showSlide(currentIndex)
+        }
+        showSlide(currentIndex);
+        setInterval(autoSLide, 5000);
     </script>
 </body>
 </html>

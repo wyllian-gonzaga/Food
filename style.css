@@ -470,6 +470,136 @@ nav{
 }
 @media (width > 1024px) {
     .chef__bg{
-        max-width: 37;
+        max-width: 375px;
     }
 }
+
+/*Testimonial*/
+.testimonial-section{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.testimonial-container{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px 0 ;
+}
+.testimonial-card{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 40px rgba(254, 140, 0, 0.3);
+    border: 2px solid #ff7e5f;
+    border-image: 1;
+    opacity: 0;
+    transform: scale(0.98);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial-card.active{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+.testimonial-card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.testimonial-card h4{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #000;
+}
+.testimonial-card h5{
+    font-size: 0.95rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 8rem;
+}
+.dots span{
+    width: 10px;
+    height: 10px;
+    background: #dcdcdc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dots span.active{
+    background-color: #db6e09;
+}
+
+/*Footer*/
+footer{
+    background-color: var(--primary-color-light);
+}
+
+.footer__container{
+    display: grid;
+    gap: 4rem 2rem;
+}
+
+.footer__logo{
+    margin-bottom: 1rem;
+}
+.footer__col .section__description{
+    text-align: left;
+}
+.footer__col h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.footer__links{
+    display: grid;  
+    gap: 0.75rem;
+}   
+.footer__links a {
+    color: var(--text-ligth);
+}
+.footer__links a:hover{
+    color: var(--primary-color);
+}
+.footer__bar{
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-ligth);
+    text-align: center;
+}
+@media(width > 540px){
+    .footer__container{
+        grid-template-columns: 3fr 2fr;
+    }
+}
+@media(width > 768px){
+    .footer__container{
+        grid-template-columns: 2fr repeat(3, 1fr);
+    }
+}
+
